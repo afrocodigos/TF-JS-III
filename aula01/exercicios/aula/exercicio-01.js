@@ -7,3 +7,5 @@ let produtosEcologicos = [
     { nome: 'Canudos de metal', disponivel: true },
     { nome: 'Frasco de vidro para armazenamento', disponivel: false }
 ];
+
+
