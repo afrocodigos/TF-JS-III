@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Métodos de String</title>
+</head>
+<body>
+
+<h1>Exemplo de Métodos de String em JavaScript</h1>
+
+<!-- Container para exibir a prévia do nome do produto -->
+<div id="previaProduto"></div>
+
+<script>
+// Nome do produto artesanal
+let nomeProduto = "Cesta de vime para piqueniques";
+
+// Exibindo uma prévia do nome do produto
+let previaNomeProduto = nomeProduto.slice(0, 15); // Corta os primeiros 15 caracteres
+
+// Exibindo a prévia do nome do produto na página
+document.getElementById("previaProduto").innerText = "Prévia do nome do produto: " + previaNomeProduto;
+
+// Verificando se o nome do produto começa com "Cesta"
+if (nomeProduto.startsWith("Cesta")) {
+    console.log("O nome do produto começa com 'Cesta'.");
+} else {
+    console.log("O nome do produto não começa com 'Cesta'.");
+}
+
+// Verificando o índice da palavra "vime" no nome do produto
+let indiceVime = nomeProduto.indexOf("vime");
+console.log("Índice da palavra 'vime': " + indiceVime);
+
+// Concatenando o nome do produto com algumas características adicionais
+let caracteristicasAdicionais = "com alças de couro";
+let nomeCompletoProduto = nomeProduto.concat(" - ", caracteristicasAdicionais);
+console.log("Nome completo do produto: " + nomeCompletoProduto);
+</script>
+
+</body>
+</html>
