@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros Disponíveis para Locação</title>
+</head>
+<body>
+    <h1>Carros Disponíveis para Locação</h1>
+    <ul id="listaCarros">
+        <!-- Aqui vamos inserir os carros disponíveis dinamicamente -->
+    </ul>
+
+    <script>
+        // Array de carros disponíveis para locação
+        let carros = [
+            { modelo: "Toyota Corolla", ano: 2020, precoDia: 100, disponivel: true },
+            { modelo: "Honda Civic", ano: 2019, precoDia: 90, disponivel: true },
+            { modelo: "Ford Focus", ano: 2018, precoDia: 80, disponivel: false },
+            { modelo: "Chevrolet Cruze", ano: 2019, precoDia: 85, disponivel: true },
+            { modelo: "Volkswagen Golf", ano: 2020, precoDia: 95, disponivel: true }
+        ];
+
+        // Filtrar carros disponíveis para locação
+        let carrosDisponiveis = carros.filter(carro => carro.disponivel);
+
+        // Selecionar a lista de carros no HTML
+        let listaCarros = document.getElementById("listaCarros");
+
+        // Adicionar cada carro disponível à lista no HTML
+        carrosDisponiveis.forEach(carro => {
+            let listItem = document.createElement("li");
+            listItem.textContent = `${carro.modelo} - Ano ${carro.ano} - Preço por Dia: R$ ${carro.precoDia}`;
+            listaCarros.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

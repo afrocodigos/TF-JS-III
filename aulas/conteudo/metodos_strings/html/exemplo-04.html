@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Funcionalidade Total com Métodos de String</title>
+</head>
+<body>
+
+<h1>Detalhes do Produto Artesanal</h1>
+
+<div id="descricaoProduto">
+    <h2>Descrição do Produto</h2>
+    <p id="descricaoTexto"></p>
+</div>
+
+<div id="categoriasProduto">
+    <h2>Categorias do Produto</h2>
+    <p id="categoriasTexto"></p>
+</div>
+
+<div id="buscaProduto">
+    <h2>Busca na Descrição do Produto</h2>
+    <input type="text" id="termoBusca" placeholder="Digite um termo">
+    <button onclick="buscarTermo()">Buscar</button>
+    <p id="resultadoBusca"></p>
+</div>
+
+<script>
+// Descrição do Produto
+let descricaoProduto = "Belíssima cesta de vime com alças, perfeita para piqueniques.";
+document.getElementById("descricaoTexto").innerText = descricaoProduto;
+
+// Categorias do Produto
+let categorias = "cestas, decoração, vime, piqueniques";
+let arrayCategorias = categorias.split(", ");
+let listaCategorias = arrayCategorias.join(", ");
+document.getElementById("categoriasTexto").innerText = listaCategorias;
+
+// Busca na Descrição do Produto
+function buscarTermo() {
+    let termo = document.getElementById("termoBusca").value.toLowerCase();
+    if (descricaoProduto.toLowerCase().includes(termo)) {
+        document.getElementById("resultadoBusca").innerText = "O termo foi encontrado na descrição do produto.";
+    } else {
+        document.getElementById("resultadoBusca").innerText = "O termo não foi encontrado na descrição do produto.";
+    }
+}
+</script>
+
+</body>
+</html>

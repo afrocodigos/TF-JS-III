@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Método trim() em HTML</title>
+</head>
+<body>
+
+<h1>Exemplo de Método trim() em HTML</h1>
+
+<!-- Container para exibir o nome do produto sem espaços em branco extras -->
+<div id="nomeProduto"></div>
+
+<script>
+// Nome do produto artesanal com espaços em branco extras
+let nomeProduto = "    Cesta de vime para piqueniques    ";
+
+// Removendo espaços em branco extras do nome do produto
+let nomeProdutoLimpo = nomeProduto.trim();
+
+// Exibindo o nome do produto sem espaços em branco extras na página
+document.getElementById("nomeProduto").innerText = "Nome do produto: " + nomeProdutoLimpo;
+</script>
+
+</body>
+</html>

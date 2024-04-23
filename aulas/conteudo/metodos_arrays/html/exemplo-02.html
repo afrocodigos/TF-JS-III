@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preços de Locação por Dia</title>
+</head>
+<body>
+    <h1>Preços de Locação por Dia</h1>
+    <ul id="listaPrecos">
+        <!-- Aqui vamos inserir os preços de locação dinamicamente -->
+    </ul>
+
+    <script>
+        // Array de carros disponíveis para locação
+        let carros = [
+            { modelo: "Toyota Corolla", ano: 2020, precoDia: 100, disponivel: true },
+            { modelo: "Honda Civic", ano: 2019, precoDia: 90, disponivel: true },
+            { modelo: "Ford Focus", ano: 2018, precoDia: 80, disponivel: false },
+            { modelo: "Chevrolet Cruze", ano: 2019, precoDia: 85, disponivel: true },
+            { modelo: "Volkswagen Golf", ano: 2020, precoDia: 95, disponivel: true }
+        ];
+
+        // Criar um array com os preços de locação por dia de todos os carros
+        let precosLocacao = carros.map(carro => carro.precoDia);
+
+        // Selecionar a lista de preços no HTML
+        let listaPrecos = document.getElementById("listaPrecos");
+
+        // Adicionar cada preço de locação à lista no HTML
+        precosLocacao.forEach(preco => {
+            let listItem = document.createElement("li");
+            listItem.textContent = `R$ ${preco.toFixed(2)}`;
+            listaPrecos.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

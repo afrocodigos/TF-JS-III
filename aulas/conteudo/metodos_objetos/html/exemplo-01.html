@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Manipulação de Objetos em JavaScript</title>
+</head>
+<body>
+
+<h2>Informações da Pessoa</h2>
+
+<!-- Elemento para exibir informações -->
+<div id="informacoes"></div>
+
+<script>
+// Objeto representando informações de uma pessoa
+let pessoa = {
+    nome: 'João',
+    idade: 30,
+    cidade: 'São Paulo'
+};
+
+// Obter as propriedades do objeto
+let propriedades = Object.keys(pessoa);
+
+// Criar uma lista de itens para exibir as informações
+let lista = document.createElement('ul');
+
+// Iterar sobre as propriedades do objeto
+propriedades.forEach(propriedade => {
+    // Criar um item de lista para cada propriedade
+    let item = document.createElement('li');
+    // Adicionar o nome da propriedade e o valor ao item da lista
+    item.textContent = `${propriedade}: ${pessoa[propriedade]}`;
+    // Adicionar o item à lista
+    lista.appendChild(item);
+});
+
+// Adicionar a lista de itens ao elemento de informações na página HTML
+document.getElementById('informacoes').appendChild(lista);
+</script>
+
+</body>
+</html>

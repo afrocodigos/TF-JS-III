@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Total para Alugar Todos os Carros por Três Dias</title>
+</head>
+<body>
+    <h1>Preço Total para Alugar Todos os Carros por Três Dias</h1>
+    <p id="precoTotal">Preço total para alugar todos os carros por três dias: <span></span></p>
+
+    <script>
+        // Array de carros disponíveis para locação
+        let carros = [
+            { modelo: "Toyota Corolla", ano: 2020, precoDia: 100, disponivel: true },
+            { modelo: "Honda Civic", ano: 2019, precoDia: 90, disponivel: true },
+            { modelo: "Ford Focus", ano: 2018, precoDia: 80, disponivel: false },
+            { modelo: "Chevrolet Cruze", ano: 2019, precoDia: 85, disponivel: true },
+            { modelo: "Volkswagen Golf", ano: 2020, precoDia: 95, disponivel: true }
+        ];
+
+        // Calcular o preço total para alugar todos os carros por três dias
+        let precoTotal = carros.reduce((total, carro) => total + carro.precoDia * 3, 0);
+
+        // Selecionar o elemento no HTML onde o preço total será exibido
+        let elementoPrecoTotal = document.querySelector("#precoTotal span");
+        
+        // Exibir o preço total no HTML
+        elementoPrecoTotal.textContent = "$" + precoTotal;
+    </script>
+</body>
+</html>
