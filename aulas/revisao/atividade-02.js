@@ -42,23 +42,23 @@ if (horarioAcesso < 8 || horarioAcesso > 22) {
 // if e else
 
 // Dados do usuário
-const nomeUsuario = "João";
-const nivelAcesso = "visitante"; // Exemplo: visitante, funcionário, gerente ou administrador
-const horarioAcesso = 10; // Exemplo de horário de acesso às 10h
+// const nomeUsuario = "João";
+// const nivelAcesso = "visitante"; // Exemplo: visitante, funcionário, gerente ou administrador
+// const horarioAcesso = 10; // Exemplo de horário de acesso às 10h
 
-// Verificar se o horário de acesso está dentro do horário de funcionamento do prédio (8h às 22h)
-if (horarioAcesso < 8 || horarioAcesso > 22) {
-  console.log("Acesso negado. O prédio está fechado.");
-} else if (nivelAcesso === "visitante") {
-  // Caso seja visitante, o horário de visitas só é permitido entre 9h e 18h
-  if (horarioAcesso < 9 || horarioAcesso > 18) {
-    console.log("Acesso negado. Visitantes só são permitidos entre 9h e 18h.");
-  } else {
-    console.log(`Olá, ${nomeUsuario}! Seja bem-vindo(a) ao prédio.`);
-  }
-} else if (nivelAcesso === "funcionário" || nivelAcesso === "gerente" || nivelAcesso === "administrador") {
-  // Funcionários, gerentes e administradores têm acesso em qualquer horário
-  console.log(`Olá, ${nomeUsuario}! Seja bem-vindo(a) ao prédio.`);
-} else {
-  console.log("Acesso negado. Nível de acesso inválido.");
-}
+// // Verificar se o horário de acesso está dentro do horário de funcionamento do prédio (8h às 22h)
+// if (horarioAcesso < 8 || horarioAcesso > 22) {
+//   console.log("Acesso negado. O prédio está fechado.");
+// } else if (nivelAcesso === "visitante") {
+//   // Caso seja visitante, o horário de visitas só é permitido entre 9h e 18h
+//   if (horarioAcesso < 9 || horarioAcesso > 18) {
+//     console.log("Acesso negado. Visitantes só são permitidos entre 9h e 18h.");
+//   } else {
+//     console.log(`Olá, ${nomeUsuario}! Seja bem-vindo(a) ao prédio.`);
+//   }
+// } else if (nivelAcesso === "funcionário" || nivelAcesso === "gerente" || nivelAcesso === "administrador") {
+//   // Funcionários, gerentes e administradores têm acesso em qualquer horário
+//   console.log(`Olá, ${nomeUsuario}! Seja bem-vindo(a) ao prédio.`);
+// } else {
+//   console.log("Acesso negado. Nível de acesso inválido.");
+// }
